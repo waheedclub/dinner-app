@@ -54,6 +54,11 @@ import EssentialLink from 'components/EssentialLink.vue'
 
 const linksList = [
   {
+    title: 'Login',
+    icon: 'dashboard',
+    link: '/'
+  },
+  {
     title: 'Admin Dashboard',
     icon: 'dashboard',
     link: '/'

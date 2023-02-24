@@ -11,7 +11,8 @@ const routes = [
       { path: '/add-food', component: () => import('src/pages/AddFood.vue') },
       { path: '/view-all-foods', component: () => import('src/pages/ViewAllFoods.vue') },
       { path: '/add-amount', component: () => import('src/pages/AddAmount.vue') },
-      { path: '/foods-detail', component: () => import('src/pages/FoodsDetails.vue') }
+      { path: '/foods-detail', component: () => import('src/pages/FoodsDetails.vue') },
+      { path: '/login', component: () => import('src/pages/Login.vue') },
     ]
   },
 
