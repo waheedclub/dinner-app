@@ -3,7 +3,7 @@
     <div class="text-h5 text-center q-pt-lg">
       Add Food
     </div>
-    <div class="row q-pa-md q-col-gutter-md justify-center">
+    <div class="row q-pa-sm q-col-gutter-md justify-center">
       <div class="col-sm-12 col-xs-12 col-md-8 col-lg-8">
         <q-select filled v-model="model" :options="options" label="Select User" />
       </div>
@@ -37,7 +37,7 @@
         </div>
       </div>
       <div class="col-sm-12 col-xs-12 col-md-8 col-lg-8">
-        <q-btn glossy class="bg-primary text-red-1 full-width" icon="add" label="Add" />
+        <q-btn class="bg-primary text-red-1 full-width" icon="add" label="Add" />
       </div>
     </div>
   </q-page>

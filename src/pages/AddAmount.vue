@@ -3,7 +3,7 @@
     <div class="text-h5 text-center q-pt-lg">
       Add Amount
     </div>
-    <div class="row q-pa-md justify-center">
+    <div class="row q-pa-sm justify-center">
       <div class="col-xs-12 col-sm-12 col-md-4 col-lg-8">
         <q-select filled v-model="model" :options="options" label="Select User" />
       </div>
@@ -11,7 +11,7 @@
         <q-input filled v-model="text" label="Amount" />
       </div>
       <div class="col-sm-12 col-xs-12 col-md-8 col-lg-8 q-mt-md">
-        <q-btn glossy class="bg-primary text-red-1 full-width" icon="add" label="Add Amount" />
+        <q-btn class="bg-primary text-red-1 full-width" icon="add" label="Add Amount" />
       </div>
     </div>
   </q-page>
