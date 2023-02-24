@@ -3,7 +3,7 @@
     <div class="text-h5 text-center q-py-lg">
      View All Foods
     </div>
-    <!-- <div class="row q-pa-sm justify-center">
+    <div class="row q-pa-sm justify-center">
       <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 shadow-1">
         <q-markup-table :separator="separator" flat bordered>
           <thead>
@@ -26,7 +26,7 @@
           </tbody>
         </q-markup-table>
       </div>
-    </div> -->
+    </div>
 
 
     <div class="q-pa-sm">
