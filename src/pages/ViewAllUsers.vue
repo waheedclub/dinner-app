@@ -33,7 +33,7 @@
             <th class="text-left">Email</th>
             <th class="text-left">Status</th>
             <th class="text-left">Image</th>
-            <th class="text-left">Actions</th>
+            <th class="text-center">Actions</th>
           </tr>
         </thead>
         <tbody>
@@ -42,7 +42,7 @@
             <td class="text-left">waheed@nodesol.com</td>
             <td class="text-left">Block</td>
             <td class="text-left">User Image</td>
-            <td class="text-left">
+            <td class="text-center">
               <q-btn icon="edit" class="bg-positive text-red-1 q-px-sm" />
               <q-btn icon="delete" class="bg-negative text-red-1 q-px-sm q-ml-sm" />
             </td>

@@ -11,7 +11,7 @@
               <th class="text-left">Date</th>
               <th class="text-left">Amount</th>
               <th class="text-left">Users</th>
-              <th class="text-left">Detail</th>
+              <th class="text-center">Detail</th>
             </tr>
           </thead>
           <tbody>
@@ -19,8 +19,8 @@
               <td class="text-left">25-08-2021</td>
               <td class="text-left">10000</td>
               <td class="text-left">10</td>
-              <td class="text-left">
-                <q-icon name="visibility_off" size="25px" />
+              <td class="text-center">
+                <q-icon name="visibility" color="secondary" size="25px" />
               </td>
             </tr>
           </tbody>
@@ -36,7 +36,7 @@
             <th class="text-left">Date</th>
             <th class="text-left">Total Amount</th>
             <th class="text-left">User</th>
-            <th class="text-left">Actions</th>
+            <th class="text-center">Actions</th>
           </tr>
         </thead>
         <tbody>
@@ -44,7 +44,7 @@
             <td class="text-left">25 08 2021</td>
             <td class="text-left">2500</td>
             <td class="text-left">50</td>
-            <td class="text-left">
+            <td class="text-center">
               <q-btn icon="visibility" class="bg-secondary text-red-1 q-px-sm q-ml-sm" />
             </td>
           </tr>
