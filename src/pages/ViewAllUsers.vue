@@ -4,7 +4,7 @@
       View All User
     </div>
 
-    <div class="row first_user_table q-pa-sm text-center justify-center">
+    <div class="row first_user_table q-pa-sm justify-center">
       <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
         <q-list bordered padding class="shadow-1">
           <q-item clickable v-ripple v-for="user in users">
