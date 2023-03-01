@@ -56,7 +56,7 @@ const linksList = [
   {
     title: 'Admin Dashboard',
     icon: 'dashboard',
-    link: '/'
+    link: '/dashboard'
   },
   {
     title: 'Add User',

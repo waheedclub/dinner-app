@@ -1,1 +1,144 @@
-// app global css in SCSS form
+
+.q-tab-panel {
+  background-color: #303030;
+}
+.bg-color {
+  background-color: #303030!important;
+  background: #303030!important;
+  color: white;
+}
+.login_page .q-field__native, .q-field__input {
+  color: white;
+}
+.login_page .q-field__label {
+  color:white;
+}
+.login_page .q-field__prepend, .login_page .q-select__dropdown-icon  {
+  color:white!important;
+}
+
+.login_page .q-field--filled .q-field__control {
+  background: none;
+}
+.login_page .q-field--filled:hover .q-field__control:hover {
+  background: none;
+}
+.login_page .q-field--highlighted:hover {
+  background: none!important;
+}
+
+.login_page .q-placeholder {
+  color:white!important;
+  opacity:  1;
+}
+
+#bg-color {
+  background-image: url('../assets/auth-bg.png') !important;
+  color: white;
+}
+
+.page-header-image{
+    position: absolute;
+    background-size: cover;
+    background-position: 50%;
+    width: 100%;
+    height: 100% !important;
+}
+
+
+.page-header {
+  min-height: 100vh;
+  max-height: 999px;
+  padding: 0;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+//Placeholder color ends here
+
+.logo-container {
+  text-align: center;
+}
+
+.bg-filter-orange{
+  background: rgba(44,44,44,.2);
+  background: -webkit-gradient(linear,left bottom,left top,from(rgba(44,44,44,.2)),to(rgba(224,23,3,.6)));
+  background: linear-gradient(0deg,rgba(44,44,44,.2),rgba(224,23,3,.6));
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+.q-field__label{
+  font-size: .8571em !important;
+}
+
+.input-text .q-field__control{
+  border: 1px solid transparent;
+  border-radius: 35px !important;
+  background-color: hsla(0,0%,100%,.1);
+  color: #fff;
+  padding: 0px 20px !important;
+}
+
+.q-field--highlighted:hover{
+  background: transparent !important;
+}
+
+.q-field--standard .q-field__control::after{
+  border-bottom : none !important;
+}
+.btn-lg{
+  font-size: 1em !important;
+  border-width: 1px;
+  border-radius: 30px!important;
+  background-color: #f96332;
+  color: #fff;
+  font-weight: 400;
+  line-height: 1.35em;
+  margin: 10px 1px;
+  border: none;
+  cursor: pointer;
+  padding: 12px 0px !important;
+
+}
+
+.forgot-text{
+  color: white !important;
+  font-weight: 600 !important;
+}
+
+#btn{
+
+  margin-top: 15%;
+}
+
+.btn-lg .q-icon{
+  font-size: 1.5em !important;
+}
+.page-header:before{
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  left: 0;
+  top: 0;
+  content: "";
+  background-color: rgba(0,0,0,.5);
+}
+.q-field--standard.q-field--highlighted .q-field__control:after {
+  transform: scale3d(0,0, 0) !important;
+}
+.login-btn{
+  text-transform: capitalize;
+  font-size: 14px;
+  font-family: Montserrat,Helvetica Neue,Arial,sans-serif;
+}
+.logo-container img{
+  width: 150px !important;
+}
+
+/**
+  To Enable Disable Carousel Arrow Icons at History Tab Ends Here
+ */
