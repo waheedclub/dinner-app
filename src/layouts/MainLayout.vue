@@ -54,11 +54,6 @@ import EssentialLink from 'components/EssentialLink.vue'
 
 const linksList = [
   {
-    title: 'Login',
-    icon: 'dashboard',
-    link: '/'
-  },
-  {
     title: 'Admin Dashboard',
     icon: 'dashboard',
     link: '/dashboard'
@@ -88,6 +83,11 @@ const linksList = [
     title: 'Add Amount',
     icon: 'request_quote',
     link: '/add-amount'
+  },
+  {
+    title: 'View all amounts',
+    icon: 'request_quote',
+    link: '/view-all-amounts'
   },
   // {
   //   title: 'Quasar Awesome',

@@ -1,9 +1,9 @@
 import { defineStore } from 'pinia';
 import { api } from 'src/boot/axios';
-import { Loading, Notify } from 'quasar';
+import { Loading, Notify, LocalStorage } from 'quasar';
 export const useAppStore = defineStore('app', {
   state: () => ({
-    pageData: null,
+    pageData: LocalStorage.getItem('page_data') ?? null,
     data : {
       perPageRecords : 10,
     }
@@ -23,6 +23,8 @@ export const useAppStore = defineStore('app', {
           this.pageData = Object.assign(pageData, data)
         }
       }
+      LocalStorage.remove('page_data')
+      LocalStorage.set('page_data', this.pageData)
     },
     async send_request(data) {
       if(data.loading) {
