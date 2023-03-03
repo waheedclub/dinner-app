@@ -22,7 +22,7 @@
               <td class="text-left">{{ amount.amount }}</td>
               <td class="text-left">{{amount.sender.name}}</td>
               <td class="text-left">{{amount.receiver.name}}</td>
-              <td class="text-left">{{amount.is_approved == 1 ? 'Approved' : 'Pending'}}</td>
+              <td class="text-left">{{amount.is_approved == 1 ? 'Approved' : amount.is_approved == 2 ? 'Rejected' : 'Pending'}}</td>
               <td class="text-center">
                 <q-icon v-if="amount.is_approved == 0" name="done" color="secondary" size="25px" @click="updateStatus(1, amount.id)" />
                 <q-icon  v-if="amount.is_approved == 0" name="clear" color="red-10" size="25px" @click="updateStatus(2, amount.id)" />

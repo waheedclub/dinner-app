@@ -17,7 +17,7 @@
             <div class="col-6 text-subtitle1">{{food.other_amount}}</div>
             <div class="col-6 text-subtitle1">Total Amount :</div>
             <div class="col-6 text-subtitle1">{{food.total_amount}}</div>
-            <div class="col-12 text-subtitle1 text-weight-bold">partner</div>
+            <div class="col-12 text-subtitle1 text-weight-bold">Stackholders</div>
             <div class="col-12">
               <div class="row" v-for="user in food.users">
                 <div class="col-6 text-subtitle1">{{user.name}}</div>

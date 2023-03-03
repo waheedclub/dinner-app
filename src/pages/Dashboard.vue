@@ -4,16 +4,16 @@
       Dashboard
     </div>
     <div class="row q-pa-sm justify-center q-col-gutter-sm">
-      <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 text-center" v-for="box in boxes">
-        <div :class="box.bg_color" class="rounded-borders q-pa-md text-red-1">
-          <div class="col-12 text-h5">{{ box.name }}</div>
+      <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 text-center" v-for="user in dashboard_users">
+        <div class="bg-green-10 rounded-borders q-pa-md text-red-1">
+          <div class="col-12 text-h5">{{ user.name }}</div>
           <div class="row q-pt-md">
-            <div class="col-6 text-subtitle1">Panding :</div>
-            <div class="col-6 text-subtitle1">{{ box.padding_price }}</div>
-            <div class="col-6 text-subtitle1">Advance :</div>
-            <div class="col-6 text-subtitle1">{{ box.advance_price }}</div>
-            <div class="col-6 text-subtitle1">Total Amount :</div>
-            <div class="col-6 text-subtitle1">{{ box.total_price }}</div>
+            <div class="col-6 text-subtitle1">Pending Amount :</div>
+            <div class="col-6 text-subtitle1">{{ user.advance_amount < 0  ? Math.abs(user.advance_amount) : 0}}</div>
+            <div class="col-6 text-subtitle1">Advance Amount :</div>
+            <div class="col-6 text-subtitle1">{{ user.advance_amount > 0  ? user.advance_amount : 0}}</div>
+            <!-- <div class="col-6 text-subtitle1">Total Amount :</div>
+            <div class="col-6 text-subtitle1">{{ box.total_price }}</div> -->
           </div>
         </div>
       </div>
@@ -35,6 +35,24 @@ export default {
         { bg_color: "bg-green-10", name: "Ch Zohaib", padding_price: "10000", advance_price: "20000", total_price: "50000" }
       ]
     }
+  },
+  computed: {
+      dashboard_users() {
+        return this.page_data && this.page_data.dashboard_users && this.page_data.dashboard_users.length ? this.page_data.dashboard_users : []
+      }
+  },
+  async mounted() {
+    await this.getUsers()
+  },
+  methods: {
+    async getUsers() {
+      let data = {
+        method: "get",
+        url: "get-dashboard-data",
+        loading: false
+      };
+        await this.send_request(data);
+    },
   }
 }
 </script>
