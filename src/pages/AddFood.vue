@@ -52,11 +52,14 @@ export default {
         date: null,
         note: null,
       },
-      users: []
+    }
+  },
+  computed: {
+    users() {
+      return this.page_data && this.page_data.users && this.page_data.users.length ? this.page_data.users : []
     }
   },
   mounted() {
-    this.users = this.page_data && this.page_data.users && this.page_data.users.length ? this.page_data.users : []
     this.getUsers()
   },
   methods: {

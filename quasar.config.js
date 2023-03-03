@@ -179,7 +179,9 @@ module.exports = configure(function (ctx) {
         ]
       }
     },
-
+    bin: {
+      linuxAndroidStudio: "/home/waheed/Downloads/android-studio-2022.1.1.19-linux/android-studio/bin/studio.sh"
+    },
     // Full list of options: https://v2.quasar.dev/quasar-cli-webpack/developing-cordova-apps/configuring-cordova
     cordova: {
       // noIosLegacyBuildFlag: true, // uncomment only if you know what you are doing

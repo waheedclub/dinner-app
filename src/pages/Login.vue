@@ -106,6 +106,7 @@ export default {
   },
   methods: {
     async login() {
+      this.loading = true;
       let data = {
         method: "post",
         url: "auth/login",
@@ -114,7 +115,12 @@ export default {
       };
         await this.send_request(data).then((res) => {
           this.store.storeAuthData(res.data.data.user, res.data.data.token.plainTextToken);
+        }).catch((error) => {
+          this.loading = false
+          console.log(error)
         });
+
+        this.loading = false
     }
   }
 };

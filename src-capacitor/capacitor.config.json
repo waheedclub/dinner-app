@@ -1,0 +1,7 @@
+{
+  "appId": "dinner.abdulwaheed.me",
+  "appName": "Dinner App",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www"
+}
