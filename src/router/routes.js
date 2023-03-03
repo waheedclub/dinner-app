@@ -11,7 +11,9 @@ const routes = [
       { path: '/view-all-foods', component: () => import('src/pages/ViewAllFoods.vue') },
       { path: '/add-amount', component: () => import('src/pages/AddAmount.vue') },
       { path: '/foods-detail/:id', component: () => import('src/pages/FoodsDetails.vue') },
-      { path: '/logout', component: () => import('src/pages/auth/Logout.vue') }
+      { path: '/logout', component: () => import('src/pages/auth/Logout.vue') },
+      { path: '/view-all-amounts', component: () => import('src/pages/ViewAllAmounts.vue') },
+
     ],
     meta: { requiresAuth: true }
   },
@@ -23,7 +25,6 @@ const routes = [
       { path: '/add-user', component: () => import('pages/AddUser.vue') },
       { path: '/add-user/:id', component: () => import('pages/AddUser.vue') },
       { path: '/view-all-users', component: () => import('src/pages/ViewAllUsers.vue') },
-      { path: '/view-all-amounts', component: () => import('src/pages/ViewAllAmounts.vue') },
     ],
     meta: { requiresAuth: true, isAdmin: true }
   },

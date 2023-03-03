@@ -82,6 +82,17 @@ export const useAppStore = defineStore('app', {
             message: 'Something went wrong: ' + message,
             icon: 'report_problem'
           })
+          if (error.response.status === 401) {
+            this.router.push('/logout');
+          }
+          if (error.response.status === 403) {
+            Notify.create({
+              color: 'negative',
+              position: 'top',
+              message: 'You are not authorized to perform this action',
+              icon: 'report_problem'
+            })
+          }
         }
         return Promise.reject(error);
       })

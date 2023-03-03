@@ -12,8 +12,8 @@
             <div class="col-6 text-subtitle1">{{ user.advance_amount < 0  ? Math.abs(user.advance_amount) : 0}}</div>
             <div class="col-6 text-subtitle1">Advance Amount :</div>
             <div class="col-6 text-subtitle1">{{ user.advance_amount > 0  ? user.advance_amount : 0}}</div>
-            <!-- <div class="col-6 text-subtitle1">Total Amount :</div>
-            <div class="col-6 text-subtitle1">{{ box.total_price }}</div> -->
+            <div class="col-6 text-subtitle1">Total Spendings :</div>
+            <div class="col-6 text-subtitle1">{{ user.total_spendings }}</div>
           </div>
         </div>
       </div>
