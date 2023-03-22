@@ -32,7 +32,7 @@
         </div>
       </div>
       <div class="col-sm-12 col-xs-12 col-md-8 col-lg-8">
-        <q-btn class="bg-primary text-red-1 full-width" icon="add" label="Add" @click="saveFood" />
+        <q-btn :loading="loading" class="bg-primary text-red-1 full-width" icon="add" label="Add" @click="saveFood" />
       </div>
     </div>
   </q-page>
@@ -45,6 +45,7 @@ export default {
   name: 'AddFood',
   data() {
     return {
+      loading: false,
       food: {
         owner_id: null,
         hotel_amount: 0,
@@ -72,6 +73,7 @@ export default {
         await this.send_request(data);
     },
     async saveFood() {
+      this.loading = true
       this.food.users = this.users.filter(user => user.is_added == true)
       this.food.users = this.food.users.map(user => user.id)
       let data = {
@@ -80,10 +82,13 @@ export default {
         data: this.food,
         loading: false
       };
-      let res =  await this.send_request(data);
+      let res =  await this.send_request(data).catch(error => {
+         this.loading = false
+      })
       if(res.status) {
         this.$router.push('/view-all-foods')
       }
+      this.loading = false
     },
   }
 }

@@ -25,6 +25,7 @@
               <td class="text-left">{{food.users_count}}</td>
               <td class="text-center">
                 <q-icon name="visibility" color="secondary" size="25px" @click="$router.push('/foods-detail/' + food.id)" />
+                <q-icon name="delete" color="red" size="25px" @click="deleteConfirm(food)" />
               </td>
             </tr>
           </tbody>
@@ -54,6 +55,7 @@
               <td class="text-left">{{food.users_count}}</td>
               <td class="text-center">
                 <q-icon name="visibility" color="secondary" size="25px" @click="$router.push('/foods-detail/' + food.id)" />
+                <q-icon name="delete" color="red" size="25px" @click="deleteConfirm(food)" />
               </td>
             </tr>
         </tbody>
@@ -87,6 +89,21 @@ export default defineComponent({
       };
         await this.send_request(data);
     },
+    async deleteConfirm(food) {
+      if(confirm('Are you sure, You want to delete this food item?')) {
+        let data = {
+        method: "delete",
+        url: "foods/"+ food.id,
+        loading: true,
+        data: {loading: true}
+      };
+        let res = await this.send_request(data);
+        if(res.status) {
+          await this.getFoods();
+         this.foods = this.page_data && this.page_data.foods && this.page_data.foods.length ? this.page_data.foods : []
+        }
+      }
+    }
   }
 })
 </script>

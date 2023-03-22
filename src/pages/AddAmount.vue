@@ -26,7 +26,7 @@
         <q-input  filled v-model="amount.note" label="Note (optional)" />
       </div>
       <div class="col-sm-12 col-xs-12 col-md-8 col-lg-8 q-mt-md">
-        <q-btn class="bg-primary text-red-1 full-width" icon="add" label="Add Amount" @click="addAmount" />
+        <q-btn :loading="loading" class="bg-primary text-red-1 full-width" icon="add" label="Add Amount" @click="addAmount" />
       </div>
     </div>
   </q-page>
@@ -39,6 +39,7 @@ export default {
   name: 'AddAmount',
   data() {
     return {
+      loading: false,
       amount : {
         sender_id: null,
         receiver_id: null,
@@ -65,16 +66,20 @@ export default {
         await this.send_request(data);
     },
     async addAmount() {
+      this.loading = true
       let data = {
         method: "post",
         url: "amounts",
         data: this.amount,
         loading: false
       };
-       let res = await this.send_request(data);
+       let res = await this.send_request(data).catch(error => {
+         this.loading = false
+       });
        if(res.status) {
          this.$router.push('/view-all-amounts');
        }
+       this.loading = false
     }
   }
 }

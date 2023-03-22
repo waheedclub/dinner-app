@@ -85,16 +85,17 @@ export default {
         await this.send_request(data);
     },
     async deleteUser(id) {
-      let data = {
+      if(confirm('Are you sure, You want to delete this user?')) {
+        let data = {
         method: "delete",
         url: "users/" + id,
         loading: false
-      };
-      let res =  await this.send_request(data);
-      if(res.status) {
-        this.getUsers()
+        };
+        let res =  await this.send_request(data);
+        if(res.status) {
+          this.getUsers()
+        }
       }
-
     }
   }
 }
