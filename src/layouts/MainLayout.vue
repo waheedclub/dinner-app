@@ -137,7 +137,7 @@ export default defineComponent({
 <style scoped>
   @media screen and (max-width: 768px) {
   .text_size {
-    font-size: 14px;
+    font-size: 18px;
   }
 }
 </style>

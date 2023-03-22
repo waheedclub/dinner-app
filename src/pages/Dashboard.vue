@@ -5,7 +5,7 @@
     </div>
     <div class="row q-pa-sm justify-center q-col-gutter-sm">
       <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 text-center" v-for="user in dashboard_users">
-        <div class="bg-green-10 rounded-borders q-pa-md text-red-1">
+        <div class="bg-primary rounded-borders q-pa-md text-red-1">
           <div class="col-12 text-h5">{{ user.name }}</div>
           <div class="row q-pt-md">
             <div class="col-6 text-subtitle1">Pending Amount :</div>
