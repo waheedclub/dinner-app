@@ -48,8 +48,8 @@ export default {
       loading: false,
       food: {
         owner_id: null,
-        hotel_amount: 0,
-        other_amount: 0,
+        hotel_amount: "",
+        other_amount: "",
         date: null,
         note: null,
       },
@@ -76,6 +76,12 @@ export default {
       this.loading = true
       this.food.users = this.users.filter(user => user.is_added == true)
       this.food.users = this.food.users.map(user => user.id)
+      if(this.food.hotel_amount == '') {
+        this.food.hotel_amount = 0;
+      }
+      if(this.food.other_amount == '') {
+        this.food.other_amount = 0;
+      }
       let data = {
         method: "post",
         url: "foods",
